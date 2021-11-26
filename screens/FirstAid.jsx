@@ -12,13 +12,13 @@ export default function FirstAid({navigation}) {
 
             <Text style={{
                 position: 'absolute',
-                top: "21%",
+                top: "30%",
                 fontWeight: 'bold',
             }}>FIRST-AID</Text>
 
             <Text style={{
                 position: 'absolute',
-                top: "25%",
+                top: "34%",
                 left: "2%",
                 marginLeft: 10,
                 marginRight: 10,
@@ -35,7 +35,7 @@ export default function FirstAid({navigation}) {
 
             <Text style={{
                 position: 'absolute',
-                top: "35%",
+                top: "44%",
                 left: "2%",
                 marginLeft: 10,
                 marginRight: 10,
@@ -49,7 +49,7 @@ export default function FirstAid({navigation}) {
 
             <Text style={{
                 position: 'absolute',
-                top: "48%",
+                top: "57%",
                 left: "2%",
                 marginLeft: 10,
                 marginRight: 10,
@@ -92,7 +92,7 @@ export default function FirstAid({navigation}) {
                 <View
                     style={{
                         position: 'absolute',
-                        top: "61%",
+                        top: "74%",
                         left: "38%"
                     }}
 
@@ -118,10 +118,10 @@ const styles = StyleSheet.create({
     },
 
     logo:{
+        position: 'absolute',
         width: "40%",
         height: "20%",
-        position: 'absolute',
-        top: 0,
+        top: "9%",
     },
 
 });

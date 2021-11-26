@@ -12,13 +12,13 @@ export default function CPR({navigation}) {
 
             <Text style={{
                 position: 'absolute',
-                top: "23%",
+                top: "28%",
                 fontWeight: 'bold',
             }}>C.P.R</Text>
 
             <Text style={{
                 position: 'absolute',
-                top: "29%",
+                top: "33%",
                 left: "1%",
                 marginLeft: 10,
                 marginRight: 10,
@@ -60,7 +60,7 @@ export default function CPR({navigation}) {
             <View
                     style={{
                         position: 'absolute',
-                        top: "60%",
+                        top: "68%",
                         left: "38%"
                     }}
 
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
         width: "40%",
         height: "20%",
         position: 'absolute',
-        top: 0,
+        top: "6%",
     },
 
 });
