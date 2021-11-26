@@ -24,7 +24,7 @@ export default function CPR({navigation}) {
             }}
 
             >
-                Cardiopulmonary resuscitation (CPR) can help save a life during a cardiac or breathing emergency. However, even after training, remembering the CPR steps and administering them correctly can be a challenge. In order to help you help someone in need, we've created this simple step-by-step guide that you can print up and place on your refrigerator, in your car, in your bag or at your desk.
+                CPR - or Cardiopulmonary Resuscitation - is an emergency lifesaving procedure performed when the heart stops beating. Immediate CPR can double or triple chances of survival after cardiac arrest.
             </Text>
 
 
