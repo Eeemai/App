@@ -60,7 +60,7 @@ export default function CPR({navigation}) {
             <View
                     style={{
                         position: 'absolute',
-                        top: "53%",
+                        top: "60%",
                         left: "38%"
                     }}
 
