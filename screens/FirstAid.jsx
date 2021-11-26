@@ -19,8 +19,11 @@ export default function FirstAid({navigation}) {
             <Text style={{
                 position: 'absolute',
                 top: "25%",
+                left: "2%",
                 marginLeft: 10,
                 marginRight: 10,
+                fontSize: 13,
+                textAlign: 'justify',
             }}
 
             >
@@ -33,8 +36,11 @@ export default function FirstAid({navigation}) {
             <Text style={{
                 position: 'absolute',
                 top: "35%",
+                left: "2%",
                 marginLeft: 10,
                 marginRight: 10,
+                fontSize: 13,
+                textAlign: 'justify',
             }}
 
             >
@@ -44,8 +50,11 @@ export default function FirstAid({navigation}) {
             <Text style={{
                 position: 'absolute',
                 top: "48%",
+                left: "2%",
                 marginLeft: 10,
                 marginRight: 10,
+                fontSize: 13,
+                textAlign: 'justify',
             }}
 
             >
@@ -59,8 +68,9 @@ export default function FirstAid({navigation}) {
                 bottom: 0,
                 color: "#fff",
                 backgroundColor: '#333333',
-                height: "10%",
+                height: "7%",
                 width: "100%",
+                fontSize: 13,
             }}
             >
                 Application Development
@@ -72,19 +82,32 @@ export default function FirstAid({navigation}) {
                 position: 'absolute',
                 bottom: 7,
                 color: "#fff",
-
+                fontSize: 13,
             }}
             >
                 Group Members: Adlawan, Loro, Tan, Lopez, Brion
 
             </Text>
 
+                <View
+                    style={{
+                        position: 'absolute',
+                        top: "61%",
+                        left: "38%"
+                    }}
+
+                    >
+                    <Button
+                    
+                        color="#f194ff"
+                        title={"<<< Home"}
+                        onPress={() => navigation.navigate('Home')}
+                    />
+                </View>
 
         </View>
     );
 }
-
-
 
 const styles = StyleSheet.create({
     container: {
@@ -100,7 +123,6 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: 0,
     },
-
 
 });
 // tinanggal ko yung sa export default kasi exported na syaaa sa line 4 (export default)

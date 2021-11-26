@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View , Image, Button} from 'react-native';
 import React from 'react';
 
-
 export default function Home({navigation}){
   return (
     <View style={styles.container}>
@@ -10,9 +9,7 @@ export default function Home({navigation}){
      
       source={require('../assets/banner.png')}>
       </Image>
-
-      
-      
+ 
       <Text style={{
         position: 'absolute',
         top: "21%",
@@ -20,10 +17,13 @@ export default function Home({navigation}){
       }}>Nationwide Tactics and Readiness </Text>
 
       <Text style={{
+        textAlign: 'justify',
         position: 'absolute',
         top: "25%",
+        left: "3%",
         marginLeft: 10,
         marginRight: 10,
+        fontSize: 13,
       }}
       
       >
@@ -32,35 +32,39 @@ export default function Home({navigation}){
     
       <Text style={{
         position: 'absolute',
-        top: "44%",
-        left: "1%",
+        top: "45%",
+        left: "2%",
         fontWeight: 'bold',
       }}>First-Aid </Text>
-
       
       <Text style={{
+        textAlign: 'justify',
         position: 'absolute',
-        top: "46%",
+        top: "49%",
+        left: "3%",
         marginLeft: 10,
         marginRight: 10,
+        fontSize: 13,
       }}
       >
         First aid is the first and immediate assistance given to any person suffering from either a minor or serious illness or injury, with care provided to preserve life, prevent the condition from worsening, or to promote recovery.
-      </Text>
+      </Text>  
      
-      
       <Text style={{
         position: 'absolute',
-        top: "68%",
-        left: "1%",
+        top: "70%",
+        left: "2%",
         fontWeight: 'bold',
       }}>C.P.R </Text>
 
       <Text style={{
+        textAlign: 'justify',
         position: 'absolute',
-        top: "71%",
+        top: "74%",
+        left: "2%",
         marginLeft: 10,
         marginRight: 10,
+        fontSize: 13,
       }}
       >
         Cardiopulmonary resuscitation (CPR) is a lifesaving technique that's useful in many emergencies, such as a heart attack or near drowning, in which someone's breathing or heartbeat has stopped.
@@ -72,8 +76,9 @@ export default function Home({navigation}){
         bottom: 0,
         color: "#fff",
         backgroundColor: '#333333',
-        height: "10%",
+        height: "7%",
         width: "100%",
+        fontSize: 13,
       }}
       >
       Application Development     
@@ -85,7 +90,7 @@ export default function Home({navigation}){
         position: 'absolute',
         bottom: 7,
         color: "#fff",
-        
+        fontSize: 13,
       }}
       >
       Group Members: Adlawan, Loro, Tan, Lopez, Brion     
@@ -96,8 +101,8 @@ export default function Home({navigation}){
 
             style={{
                 position: 'absolute',
-                top: "61%",
-                left: "1%"
+                top: "64%",
+                left: "28%"
             }}
 
         >
@@ -112,8 +117,8 @@ export default function Home({navigation}){
         <View
             style={{
                 position: 'absolute',
-                top: "83%",
-                left: "1%"
+                top: "86%",
+                left: "28%"
             }}
 
         >
@@ -129,8 +134,6 @@ export default function Home({navigation}){
 
   );
 }
-
-
 
 const styles = StyleSheet.create({
   container: {
@@ -152,8 +155,4 @@ const styles = StyleSheet.create({
     backgroundColor: '#333333',
   }
   
-  
-  
-
 });
-

@@ -11,7 +11,6 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-   //yung pang navigate mismo
    <NavigationContainer>
     <Stack.Navigator initialRouteName={"Home"}>
 
@@ -66,6 +65,3 @@ export default function App() {
    </NavigationContainer>
   );
 }
-
-
-
