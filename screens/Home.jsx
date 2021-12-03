@@ -1,14 +1,19 @@
-import { StyleSheet, Text, View , Image, Button} from 'react-native';
+import { StyleSheet, Text, View , Image, Button, Dimensions} from 'react-native';
 import React from 'react';
 
+
+{/*Calculated device width*/}
+let deviceWidth = Dimensions.get("screen").width;
+
 export default function Home({navigation}){
+  
   return (
     <View style={styles.container}>
-      <Image 
-      style={styles.banner}
-     
-      source={require('../assets/banner.png')}>
-      </Image>
+      {/*background gradient*/}
+      <Image source={require('../assets/grad.jpg')} />
+
+      {/*Banner*/}
+      <Image style={styles.banner} source={require('../assets/banner.png')} />
  
       <Text style={{
         position: 'absolute',
@@ -20,10 +25,9 @@ export default function Home({navigation}){
         textAlign: 'justify',
         position: 'absolute',
         top: "25%",
-        left: "3%",
         marginLeft: 10,
         marginRight: 10,
-        fontSize: 13,
+        fontSize: deviceWidth * 0.04,
       }}
       
       >
@@ -141,6 +145,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#91f2ff',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 0
   },
   
   banner:{

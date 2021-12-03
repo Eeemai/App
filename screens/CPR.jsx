@@ -4,6 +4,7 @@ import React from 'react';
 export default function CPR({navigation}) {
     return (
         <View style={styles.container}>
+            <Image source={require('../assets/grad.jpg')} />
             <Image
                 style={styles.logo}
 
