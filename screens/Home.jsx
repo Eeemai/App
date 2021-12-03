@@ -10,10 +10,10 @@ export default function Home({navigation}){
   return (
     <View style={styles.container}>
       {/*background gradient*/}
-      <Image source={require('../assets/grad.jpg')} />
+      <Image source={require('../assets/img/grad.jpg')} />
 
       {/*Banner*/}
-      <Image style={styles.banner} source={require('../assets/banner.png')} />
+      <Image style={styles.banner} source={require('../assets/img/banner.png')} />
  
       <Text style={{
         position: 'absolute',

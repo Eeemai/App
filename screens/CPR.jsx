@@ -4,11 +4,11 @@ import React from 'react';
 export default function CPR({navigation}) {
     return (
         <View style={styles.container}>
-            <Image source={require('../assets/grad.jpg')} />
+            <Image source={require('../assets/img/grad.jpg')} />
             <Image
                 style={styles.logo}
 
-                source={require('../assets/hands.png')}>
+                source={require('../assets/img/hands.png')}>
             </Image>
 
             <Text style={{

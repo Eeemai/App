@@ -4,11 +4,11 @@ import React from 'react';
 export default function FirstAid({navigation}) {
     return (
         <View style={styles.container}>
-            <Image source={require('../assets/grad.jpg')} />
+            <Image source={require('../assets/img/grad.jpg')} />
             <Image
                 style={styles.logo}
 
-                source={require('../assets/red-cross.png')}>
+                source={require('../assets/img/red-cross.png')}>
             </Image>
 
             <Text style={{
