@@ -1,163 +1,231 @@
-import { StyleSheet, Text, View , Image, Button, Dimensions} from 'react-native';
-import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Button,
+  Dimensions,
+  SafeAreaView,
+} from "react-native";
+import React from "react";
+import Carousel from "react-native-snap-carousel";
 
-
-{/*Calculated device width*/}
+{
+  /*Calculated device width*/
+}
 let deviceWidth = Dimensions.get("screen").width;
+let prop;
 
-export default function Home({navigation}){
-  
-  return (
-    <View style={styles.container}>
-      {/*background gradient*/}
-      <Image source={require('../assets/img/grad.jpg')} />
+export default class Intro extends React.Component {
+  constructor(props) {
+    super(props);
+    prop = props;
+    this.state = {
+      activeIndex: 0,
+      carouselItems: [
+        {
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkJq_ziO9KaSX6vCdbnAqn7egojPy5HmezIvhnggK45uyy3WTmHoN2KrksspYmu-C4ROY&usqp=CAU",
+          title: "First-Aid",
+          text: "First aid is the first and immediate assistance given ...",
+          location: "FirstAid",
+        },
+        {
+          image:
+            "https://i.pinimg.com/originals/16/5a/e8/165ae8d3ccfc753771a302ad4cb7f8cb.png",
+          title: "C.P.R",
+          text: "Cardiopulmonary resuscitation (CPR) is a lifesaving technique ...",
+          location: "CPR",
+        },
+        {
+          image:
+            "https://us.123rf.com/450wm/martialred/martialred1803/martialred180300082/98186993-red-automated-external-defibrillator-aed-sign-with-heart-and-electricity-symbol-flat-vector-icon.jpg?ver=6",
+          title: "A.E.D",
+          text: "An AED, or automated external defibrillator, is used to help...",
+          location: "CPR",
+        },
+      ],
+    };
+  }
 
-      {/*Banner*/}
-      <Image style={styles.banner} source={require('../assets/img/banner.png')} />
- 
-      <Text style={{
-        position: 'absolute',
-        top: "21%",
-        fontWeight: 'bold',
-      }}>Nationwide Tactics and Readiness </Text>
+  _renderItem({ item, index }) {
+    const { navigate } = prop.navigation;
 
-      <Text style={{
-        textAlign: 'justify',
-        position: 'absolute',
-        top: "25%",
-        marginLeft: 10,
-        marginRight: 10,
-        fontSize: deviceWidth * 0.04,
-      }}
-      
+    return (
+      <View
+        style={{
+          backgroundColor: "white",
+          borderRadius: 5,
+          height: 300,
+          padding: 10,
+          marginLeft: 25,
+          marginRight: 25,
+        }}
       >
-        NTR also known as Nationwide Tactics and Readiness is a website that aims to inform, educate, and train individuals in the simplest form of first aid. The website provides step by step instructions on the different applications of bandages or splints on specific situations that requires the person to apply immediate care.
-      </Text>  
-    
-      <Text style={{
-        position: 'absolute',
-        top: "45%",
-        left: "2%",
-        fontWeight: 'bold',
-      }}>First-Aid </Text>
-      
-      <Text style={{
-        textAlign: 'justify',
-        position: 'absolute',
-        top: "49%",
-        left: "3%",
-        marginLeft: 10,
-        marginRight: 10,
-        fontSize: deviceWidth * 0.036,
-      }}
-      >
-        First aid is the first and immediate assistance given to any person suffering from either a minor or serious illness or injury, with care provided to preserve life, prevent the condition from worsening, or to promote recovery.
-      </Text>  
-     
-      <Text style={{
-        position: 'absolute',
-        top: "70%",
-        left: "2%",
-        fontWeight: 'bold',
-      }}>C.P.R </Text>
-
-      <Text style={{
-        textAlign: 'justify',
-        position: 'absolute',
-        top: "74%",
-        left: "2%",
-        marginLeft: 10,
-        marginRight: 10,
-        fontSize: deviceWidth * 0.036,
-      }}
-      >
-        Cardiopulmonary resuscitation (CPR) is a lifesaving technique that's useful in many emergencies, such as a heart attack or near drowning, in which someone's breathing or heartbeat has stopped.
-      </Text>
-
-      <Text style={{
-        textAlign: 'center',
-        position: 'absolute',
-        bottom: 0,
-        color: "#fff",
-        backgroundColor: '#333333',
-        height: "7%",
-        width: "100%",
-        fontSize: 13,
-      }}
-      >
-      Application Development     
-      
-      </Text>
-      
-      <Text style={{
-        textAlign: 'center',
-        position: 'absolute',
-        bottom: 7,
-        color: "#fff",
-        fontSize: 13,
-      }}
-      >
-      Group Members: Adlawan, Loro, Tan, Lopez, Brion     
-      
-      </Text>
-
+        <Image
+          source={{ uri: item.image }}
+          style={{ width: 150, height: 150, alignSelf: "center" }}
+        />
+        <Text style={{ fontSize: 30 }}>{item.title}</Text>
+        <Text>{item.text}</Text>
         <View
-
-            style={{
-                position: 'absolute',
-                top: "64%",
-                left: "28%"
-            }}
-
-        >
-            <Button
-                color="#f194ff"
-                title={"Find out More>>>"}
-                onPress={() => navigation.navigate('FirstAid')}
-            />
-        </View>
-
-
-        <View
-            style={{
-                position: 'absolute',
-                top: "86%",
-                left: "28%"
-            }}
-
+          style={{
+            margin: 10,
+            paddingLeft: 30,
+            paddingRight: 30,
+          }}
         >
           <Button
-                color="#f194ff"
-                title={"Find out More>>>"}
-                onPress={() => navigation.navigate('CPR')}
-            />
+            color="#026eb7"
+            title={"Find out More>>>"}
+            onPress={() => navigate(item.location)}
+          />
+        </View>
+      </View>
+    );
+  }
+
+  render() {
+    const { navigate } = prop.navigation;
+
+    return (
+      <SafeAreaView
+        style={{
+          flex: 1,
+
+          //alignItems: "center",
+        }}
+      >
+        <View style={styles.container}>
+          {/*background gradient*/}
+          <Image source={require("../assets/img/grad.jpg")} />
+
+          {/*Banner*/}
+          <Image
+            style={styles.banner}
+            source={require("../assets/img/banner.png")}
+          />
         </View>
 
+        <View
+          style={{
+            alignSelf: "center",
+            alignItems: "center",
+            position: "absolute",
+            top: "21%",
+            margin: 10,
+          }}
+        >
+          <Text
+            style={{
+              fontWeight: "bold",
+              color: "white",
+            }}
+          >
+            What is NTR?
+          </Text>
 
-    </View>
+          <Text
+            style={{
+              fontWeight: "bold",
+              color: "white",
+              marginTop: 10,
+            }}
+          >
+            NTR also known as Nationwide Tactics and Readiness is a website that
+            aims...
+          </Text>
 
-  );
+          <View
+            style={{
+              top: 10,
+            }}
+          >
+            <Button
+              color="#055c91"
+              title={">>Full Description<<"}
+              onPress={() => navigate("FirstAid")}
+            />
+          </View>
+        </View>
+
+        <View
+          style={{
+            flex: 1,
+            flexDirection: "row",
+            justifyContent: "center",
+            marginTop: -65,
+          }}
+        >
+          <Carousel
+            layout={"default"}
+            ref={(ref) => (this.carousel = ref)}
+            data={this.state.carouselItems}
+            sliderWidth={300}
+            itemWidth={300}
+            renderItem={this._renderItem}
+            onSnapToItem={(index) => this.setState({ activeIndex: index })}
+          />
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+            width: "100%",
+            backgroundColor: "#055c91",
+            height: 30,
+          }}
+        >
+          <Text
+            style={{ paddingLeft: 10, paddingRight: 20, fontSize: 18 }}
+            onPress={() => navigate("FirstAid")}
+          >
+            Home
+          </Text>
+          <Text
+            style={{ paddingLeft: 15, paddingRight: 20, fontSize: 18 }}
+            onPress={() => navigate("CPR")}
+          >
+            Learn More
+          </Text>
+          <Text
+            style={{ paddingLeft: 20, paddingRight: 15, fontSize: 18 }}
+            onPress={() => navigate("Home")}
+          >
+            About
+          </Text>
+          <Text
+            style={{ paddingLeft: 20, paddingRight: 10, fontSize: 18 }}
+            onPress={() => navigate("Home")}
+          >
+            Contact Us
+          </Text>
+        </View>
+      </SafeAreaView>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#91f2ff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 0
+    backgroundColor: "#91f2ff",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 0,
   },
-  
-  banner:{
+
+  banner: {
     width: "100%",
-    height: "20%",
-    position: 'absolute',
+    height: "40%",
+    position: "absolute",
     top: 0,
   },
-  
-  footer:{
+
+  footer: {
     flex: 1,
-    backgroundColor: '#333333',
-  }
-  
+    backgroundColor: "#333333",
+  },
 });

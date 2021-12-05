@@ -1,5 +1,6 @@
 import React from "react";
 import { StatusBar } from "react-native";
+import Intro from "./screens/Intro";
 import Home from "./screens/Home";
 import FirstAid from "./screens/FirstAid";
 import CPR from "./screens/CPR";
@@ -12,7 +13,16 @@ export default function App() {
   return (
     <NavigationContainer>
       <StatusBar></StatusBar>
-      <Stack.Navigator initialRouteName={"Home"}>
+      <Stack.Navigator initialRouteName={"Intro"}>
+
+        <Stack.Screen
+          name="Intro"
+          component={Intro}
+          options={{
+            headerShown: false,
+          }}
+        />
+
         <Stack.Screen
           name="Home"
           component={Home}
