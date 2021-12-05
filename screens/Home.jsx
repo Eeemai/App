@@ -48,7 +48,7 @@ export default function Home({navigation}){
         left: "3%",
         marginLeft: 10,
         marginRight: 10,
-        fontSize: 13,
+        fontSize: deviceWidth * 0.036,
       }}
       >
         First aid is the first and immediate assistance given to any person suffering from either a minor or serious illness or injury, with care provided to preserve life, prevent the condition from worsening, or to promote recovery.
@@ -68,7 +68,7 @@ export default function Home({navigation}){
         left: "2%",
         marginLeft: 10,
         marginRight: 10,
-        fontSize: 13,
+        fontSize: deviceWidth * 0.036,
       }}
       >
         Cardiopulmonary resuscitation (CPR) is a lifesaving technique that's useful in many emergencies, such as a heart attack or near drowning, in which someone's breathing or heartbeat has stopped.

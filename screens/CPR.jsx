@@ -1,5 +1,8 @@
-import { StyleSheet, Text, View , Image, Button} from 'react-native';
+import { StyleSheet, Text, View , Image, Button, Dimensions} from 'react-native';
 import React from 'react';
+
+{/*Calculated device width*/}
+let deviceWidth = Dimensions.get("screen").width;
 
 export default function CPR({navigation}) {
     return (
@@ -23,7 +26,7 @@ export default function CPR({navigation}) {
                 left: "1%",
                 marginLeft: 10,
                 marginRight: 10,
-                fontSize: 13,
+                fontSize: deviceWidth * 0.035,
                 textAlign: "justify",
             }}
 
@@ -39,7 +42,7 @@ export default function CPR({navigation}) {
                 backgroundColor: '#333333',
                 height: "7%",
                 width: "100%",
-                fontSize: 13,
+                fontSize: deviceWidth * 0.035,
             }}
             >
                 Application Development
@@ -51,7 +54,7 @@ export default function CPR({navigation}) {
                 position: 'absolute',
                 bottom: 7,
                 color: "#fff",
-                fontSize: 13,
+                fontSize: deviceWidth * 0.033,
             }}
             >
                 Group Members: Adlawan, Loro, Tan, Lopez, Brion
@@ -61,7 +64,7 @@ export default function CPR({navigation}) {
             <View
                     style={{
                         position: 'absolute',
-                        top: "68%",
+                        top: "74%",
                         left: "38%"
                     }}
 
