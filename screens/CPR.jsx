@@ -8,11 +8,7 @@ export default function CPR({navigation}) {
     return (
         <View style={styles.container}>
             <Image source={require('../assets/img/grad.jpg')} />
-            <Image
-                style={styles.logo}
-
-                source={require('../assets/img/hands.png')}>
-            </Image>
+            <Image style={styles.logo} source={require('../assets/img/hands.png')}></Image>
 
             <Text style={{
                 position: 'absolute',
@@ -62,19 +58,34 @@ export default function CPR({navigation}) {
             </Text>
 
             <View
-                    style={{
-                        position: 'absolute',
-                        top: "74%",
-                        left: "38%"
-                    }}
+            style={{
+                position: 'absolute',
+                top: "78%",
+                left: "20%"
+            }}
 
-                    >
-                    <Button
-                        color="#f194ff"
-                        title={"<<<Home"}
-                        onPress={() => navigation.navigate('Home')}
-                    />
-                </View>
+        >
+          <Button
+                color="#f194ff"
+                title={"<<<BACK"}
+                onPress={() => navigation.navigate('FirstAid')}
+            />
+        </View>
+
+            <View
+                style={{
+                    position: 'absolute',
+                    top: "78%",
+                    left: "60%"
+                }}
+
+            >
+            <Button
+                    color="#f194ff"
+                    title={"Home>>>"}
+                    onPress={() => navigation.navigate('Home')}
+                />
+            </View>
 
         </View>
     );

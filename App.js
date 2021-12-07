@@ -2,6 +2,7 @@ import React from "react";
 import { StatusBar } from "react-native";
 import Intro from "./screens/Intro";
 import Home from "./screens/Home";
+import NTR from "./screens/NTR";
 import FirstAid from "./screens/FirstAid";
 import CPR from "./screens/CPR";
 import { NavigationContainer } from "@react-navigation/native";
@@ -26,6 +27,14 @@ export default function App() {
         <Stack.Screen
           name="Home"
           component={Home}
+          options={{
+            headerShown: false,
+          }}
+        />
+
+        <Stack.Screen
+          name="NTR"
+          component={NTR}
           options={{
             headerShown: false,
           }}

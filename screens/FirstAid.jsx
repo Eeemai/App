@@ -1,5 +1,8 @@
-import { StyleSheet, Text, View, Image, Button } from "react-native";
+import { StyleSheet, Text, View, Image, Button, Dimensions } from "react-native";
 import React from "react";
+
+{/*Calculated device width*/}
+let deviceWidth = Dimensions.get("screen").width;
 
 export default function FirstAid({ navigation }) {
   return (
@@ -100,18 +103,35 @@ export default function FirstAid({ navigation }) {
       </Text>
 
       <View
-        style={{
-          position: "absolute",
-          top: "74%",
-          left: "38%",
-        }}
-      >
-        <Button
-          color="#f194ff"
-          title={"<<< Home"}
-          onPress={() => navigation.navigate("Home")}
-        />
-      </View>
+            style={{
+                position: 'absolute',
+                top: "70%",
+                left: "20%"
+            }}
+
+        >
+          <Button
+                color="#f194ff"
+                title={"<<<BACK"}
+                onPress={() => navigation.navigate('NTR')}
+            />
+        </View>
+
+        <View
+            style={{
+                position: 'absolute',
+                top: "70%",
+                left: "60%"
+            }}
+
+        >
+          <Button
+                color="#f194ff"
+                title={"NEXT>>>"}
+                onPress={() => navigation.navigate('CPR')}
+            />
+        </View>
+
     </View>
   );
 }
