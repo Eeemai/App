@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import React from "react";
 import Carousel from "react-native-snap-carousel";
-import FirstAid from "./FirstAid";
 
 {
   /*Calculated device width*/
@@ -77,10 +76,10 @@ export default class Intro extends React.Component {
           }}
         >
           <Button
-              color="#055c91"
-              title={"FIND OUT MORE>>>"}
-              onPress={() => navigate("FirstAid")}
-            />
+            color="#026eb7"
+            title={"Find out More>>>"}
+            onPress={() => navigate(item.location)}
+          />
         </View>
       </View>
     );
@@ -145,10 +144,9 @@ export default class Intro extends React.Component {
             <Button
               color="#055c91"
               title={">>Full Description<<"}
-              onPress={() => navigate("NTR")}
+              onPress={() => navigate("FirstAid")}
             />
           </View>
-
         </View>
 
         <View
@@ -177,29 +175,29 @@ export default class Intro extends React.Component {
             justifyContent: "space-evenly",
             width: "100%",
             backgroundColor: "#055c91",
-            height: 60,
+            height: 30,
           }}
         >
           <Text
-            style={{ paddingLeft: 17, paddingRight: 20, fontSize: deviceWidth * 0.036}}
+            style={{ paddingLeft: 10, paddingRight: 20, fontSize: 18 }}
             onPress={() => navigate("FirstAid")}
           >
             Home
           </Text>
           <Text
-            style={{ paddingLeft: 13, paddingRight: 20, fontSize: deviceWidth * 0.036}}
+            style={{ paddingLeft: 15, paddingRight: 20, fontSize: 18 }}
             onPress={() => navigate("CPR")}
           >
             Learn More
           </Text>
           <Text
-            style={{ paddingLeft: 17, paddingRight: 15, fontSize: deviceWidth * 0.036}}
+            style={{ paddingLeft: 20, paddingRight: 15, fontSize: 18 }}
             onPress={() => navigate("Home")}
           >
             About
           </Text>
           <Text
-            style={{ paddingLeft: 13, paddingRight: 10, fontSize: deviceWidth * 0.036}}
+            style={{ paddingLeft: 20, paddingRight: 10, fontSize: 18 }}
             onPress={() => navigate("Home")}
           >
             Contact Us
