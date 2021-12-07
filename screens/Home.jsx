@@ -144,7 +144,7 @@ export default class Intro extends React.Component {
             <Button
               color="#055c91"
               title={">>Full Description<<"}
-              onPress={() => navigate("FirstAid")}
+              onPress={() => navigate("NTR")}
             />
           </View>
         </View>
