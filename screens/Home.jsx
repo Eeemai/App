@@ -44,6 +44,13 @@ export default class Intro extends React.Component {
           text: "An AED, or automated external defibrillator, is used to help...",
           location: "CPR",
         },
+        {
+          image:
+            "https://i.pinimg.com/originals/d2/8b/50/d28b50cfdc4d75a2cdd511f326311c7d.jpg",
+          title: "Professions",
+          text: "Click to see a list of possible professions related to health",
+          location: "Professions",
+        },
       ],
     };
   }
