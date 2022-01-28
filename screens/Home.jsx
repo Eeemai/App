@@ -6,6 +6,7 @@ import {
   Button,
   Dimensions,
   SafeAreaView,
+  Pressable,
 } from "react-native";
 import React from "react";
 import Carousel from "react-native-snap-carousel";
@@ -16,9 +17,9 @@ import Carousel from "react-native-snap-carousel";
 let deviceWidth = Dimensions.get("screen").width;
 let prop;
 
-export default class Intro extends React.Component {
+export default class Intro extends React.Component {  
   constructor(props) {
-    super(props);
+        super(props);
     prop = props;
     this.state = {
       activeIndex: 0,
@@ -93,7 +94,7 @@ export default class Intro extends React.Component {
   }
 
   render() {
-    const { navigate } = prop.navigation;
+    const { navigate } = prop.navigation;    
 
     return (
       <SafeAreaView
@@ -205,6 +206,10 @@ export default class Intro extends React.Component {
             Contact Us
           </Text>
         </View>
+
+        <Pressable style={styles.Api} onPress={() => navigate("API")}>
+        <Text style={styles.Apii}>API</Text>
+      </Pressable>
       </SafeAreaView>
     );
   }
@@ -229,5 +234,22 @@ const styles = StyleSheet.create({
   footer: {
     flex: 1,
     backgroundColor: "#333333",
+  },
+
+  Api: {
+    position: "absolute",
+    right: "4%",
+    bottom: "8%",
+    padding: 10,
+    borderRadius: 200,
+    backgroundColor: "#055c91",
+    elevation: 10,
+  },
+
+  Apii: {
+    color: "#fff",
+    fontSize: 20,
+    textAlign: "center",
+    padding: "4%"
   },
 });
