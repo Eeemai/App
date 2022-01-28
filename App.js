@@ -5,6 +5,7 @@ import Home from "./screens/Home";
 import NTR from "./screens/NTR";
 import FirstAid from "./screens/FirstAid";
 import CPR from "./screens/CPR";
+import AED from "./screens/AED";
 import Professions from "./screens/Professions";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -52,6 +53,14 @@ export default function App() {
         <Stack.Screen
           name="CPR"
           component={CPR}
+          options={{
+            headerShown: false,
+          }}
+        />
+
+<Stack.Screen
+          name="AED"
+          component={AED}
           options={{
             headerShown: false,
           }}

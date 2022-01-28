@@ -17,7 +17,7 @@ export default function Professions({ navigation }) {
     console.log(val.long_name);
     return (
       <View style={styles.item} key={key}>
-        <Text>{val.id}</Text>
+        <Text>{val.array}</Text>
       </View>
     );
   });

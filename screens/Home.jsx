@@ -42,7 +42,7 @@ export default class Intro extends React.Component {
             "https://us.123rf.com/450wm/martialred/martialred1803/martialred180300082/98186993-red-automated-external-defibrillator-aed-sign-with-heart-and-electricity-symbol-flat-vector-icon.jpg?ver=6",
           title: "A.E.D",
           text: "An AED, or automated external defibrillator, is used to help...",
-          location: "CPR",
+          location: "AED",
         },
         {
           image:
@@ -187,19 +187,14 @@ export default class Intro extends React.Component {
         >
           <Text
             style={{ paddingLeft: 10, paddingRight: 20, fontSize: 18 }}
-            onPress={() => navigate("FirstAid")}
+            onPress={() => navigate("Home")}
           >
             Home
           </Text>
-          <Text
-            style={{ paddingLeft: 15, paddingRight: 20, fontSize: 18 }}
-            onPress={() => navigate("CPR")}
-          >
-            Learn More
-          </Text>
+
           <Text
             style={{ paddingLeft: 20, paddingRight: 15, fontSize: 18 }}
-            onPress={() => navigate("Home")}
+            onPress={() => navigate("NTR")}
           >
             About
           </Text>

@@ -22,7 +22,7 @@ export default function Home({ navigation }) {
         <Image source={require("../assets/img/grad.jpg")} />
         <Image
           style={styles.logo}
-          source={require("../assets/img/logo.png")}
+          source={require("../assets/img/weebbanner.jpg")}
         ></Image>
 
         <Text
@@ -34,7 +34,7 @@ export default function Home({ navigation }) {
             paddingLeft: 7,
           }}
         >
-          "Nationwide Tactics and Readiness"{" "}
+          "Nationwide Tactics and Readiness"
         </Text>
 
         <Text
@@ -90,7 +90,9 @@ export default function Home({ navigation }) {
             fontWeight: "bold",
             fontSize: deviceWidth * 0.042,
             paddingLeft: 7,
-            color: "#fff",
+            color: "#33334d",
+            backgroundColor: "#e0e0d1",
+            height: 200,
           }}
         >
           This Application is for educational purposes only
@@ -102,7 +104,7 @@ export default function Home({ navigation }) {
             top: "66%",
             fontSize: deviceWidth * 0.042,
             paddingLeft: 7,
-            color: "#fff",
+            color: "#33334d",
           }}
         >
           All rights will be given to the owners.{"\n\n"}
@@ -128,7 +130,7 @@ export default function Home({ navigation }) {
           style={{
             textAlign: "center",
             position: "absolute",
-            bottom: 0,
+            bottom: -19,
             color: "#fff",
             backgroundColor: "#333333",
             height: "7%",
@@ -154,7 +156,7 @@ export default function Home({ navigation }) {
         <View
           style={{
             position: "absolute",
-            top: "86%",
+            top: "91%",
             left: "40%",
           }}
         >
@@ -178,10 +180,10 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    width: "70%",
-    height: "20%",
+    width: "100%",
+    height: "14%",
     position: "absolute",
-    top: "-5%",
-    left: "16%",
+    top: "0%",
+    alignSelf: "center",
   },
 });
